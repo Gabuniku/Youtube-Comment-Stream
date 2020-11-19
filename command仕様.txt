@@ -1,0 +1,17 @@
+コマンドエリアはこの<>でくくる.
+<command=引数> ~ ここ以降に影響がある
+command (引数) : デフォルト値
+    size(size)
+    size(整数)                : <size=50>
+    color(R,G,B,A)
+    color(整数,整数,整数,整数)  : <color=(255,255,255,255)> ※値は0~255 ,Aは省略可能(その場合A=255) ,()も省略可能*非推奨
+    color(color name,A)
+    color(文字,整数)           :<color=(white,255)> ※Aは省略可能(その場合A=255)
+
+    色名一覧
+        red
+        blue
+        green
+        yellow
+        black
+        white
