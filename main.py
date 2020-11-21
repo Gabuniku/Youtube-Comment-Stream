@@ -2,6 +2,7 @@ import threading
 import time
 import json
 import sys
+import os
 
 import emoji
 import pygame as pg
@@ -178,12 +179,15 @@ class Comment(pg.sprite.Sprite):
         x = y = 0
         for i in range(len(image_list)):
             ix, iy = image_list[i].size
-            comment_image.paste(image_list[i], (x, int((high/2)-(iy/2))))
+            comment_image.paste(image_list[i], (x, int((high / 2) - (iy / 2))))
             x += ix
         return pg.image.fromstring(comment_image.tobytes(), comment_image.size, "RGBA")
 
 
 if __name__ == "__main__":
+    if not os.path.exists("config.json"):
+        with open("config.json", "w", encoding="utf-8") as f:
+            f.write(json.dumps(default_data))
     with open("config.json", "r", encoding="utf-8") as CFG:
         setting = json.loads(CFG.read())
         setting.update(default_data)
