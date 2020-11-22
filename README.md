@@ -12,7 +12,7 @@ BBの画面に表示されるので、obsなどの配信ツール上でクロマ
 |  CPU   | 十分高速なもの |
 |インターネット|ブロードバンド回線|
 
-__ Youtube Data v3 APIキーが必須!! __ <br>
+**Youtube Data v3 APIキーが必須!!** <br>
 
 <br>
 
